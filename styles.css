@@ -51,7 +51,7 @@ select {
 }
 
 textarea {
-  width: 100%;
+  width: 90%;
   height: 120px;
   border: 2px solid pink;
   border-radius: 10px;
