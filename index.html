@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Diary</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="script.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>📖 My Cute Pink Diary 💕</h1>
+
+      <div class="date-selector">
+        <select id="year-select"></select>
+        <select id="month-select"></select>
+        <select id="day-select"></select>
+      </div>
+
+      <div class="entry-form">
+        <h2>Diary Entry for <span id="selected-date">Select a date</span></h2>
+        <textarea id="diary-text" placeholder="Write something..."></textarea>
+        <button onclick="saveEntry()">Save</button>
+        <button onclick="editEntry()">Edit</button>
+        <button onclick="deleteEntry()">Delete</button>
+      </div>
+
+      <div id="success-message" class="hidden">
+        ✨ Data added successfully Ankita!!! 🎉
+      </div>
+
+      <div class="view-entries">
+        <h2>View Past Entries</h2>
+        <select id="view-year-select"></select>
+        <select id="view-month-select"></select>
+        <select id="view-day-select"></select>
+        <button onclick="viewEntry()">View</button>
+        <button onclick="viewMonthEntries()">View Month Entries</button>
+        <div id="entry-display"></div>
+      </div>
+
+      <div class="month-entries">
+        <h2>Entries for Selected Month</h2>
+        <table id="month-data-table">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Entry</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+
+      <footer>Made with 💖 love by Ankita Gautam</footer>
+    </div>
+  </body>
+</html>
